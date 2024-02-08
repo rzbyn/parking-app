@@ -5,6 +5,7 @@ import { Dialect } from 'sequelize';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TicketsModule } from './tickets/tickets.module';
+import { ConfigurationsModule } from './configurations/configurations.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { TicketsModule } from './tickets/tickets.module';
       inject: [ConfigService],
     }),
     TicketsModule,
+    ConfigurationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
