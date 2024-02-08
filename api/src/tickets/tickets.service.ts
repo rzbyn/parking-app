@@ -42,7 +42,7 @@ export class TicketsService {
    */
   async update(
     id: Ticket['id'],
-    data: Pick<Ticket, 'departure' | 'status'>,
+    data: Pick<Ticket, 'status'>,
   ): Promise<Ticket> {
     const ticket = await this.ticket.findByPk(id);
     if (!ticket) throw new NotFoundException('Ticket not found');
